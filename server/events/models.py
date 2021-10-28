@@ -3,7 +3,7 @@ from companies.models import Company
 
 
 class Event(models.Model):
-    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=200)
     description = models.TextField()
     startsAt = models.DateTimeField()
     endsAt = models.DateTimeField()
@@ -11,4 +11,7 @@ class Event(models.Model):
     organizer = models.ForeignKey(Company, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.organizer.name}: {self.name}"
+        return f"{self.title}, {self.organizer.name}"
+
+    class Meta:
+        ordering = ["startsAt"]
