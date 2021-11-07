@@ -9,4 +9,6 @@ router = DefaultRouter()
 router.register(r"companies", CompanyViewSet)
 router.register(r"events", EventViewSet)
 
-urlpatterns = [path("admin/", admin.site.urls), path("", include(router.urls))]
+urlpatterns = [ 
+    path("admin/", admin.site.urls), 
+    path("api/", include(router.urls))]
