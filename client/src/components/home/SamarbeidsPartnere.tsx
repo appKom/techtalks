@@ -15,9 +15,16 @@ const Samarbeidspartnere: FC = () => {
   }, []);
 
   if (companies === undefined) return(<Wrapper> Loading... </Wrapper>);
+
+  const companyElements = companies.map((company) => <div key={company.id}>
+    <img alt="bedriftsbilde" src={company.logo}/>
+    {company.name} {company.description}
+    </div>)
+
+
   return (
     <Wrapper>
-      {companies[0].name}
+      {companyElements}
     </Wrapper>
   );
 };
