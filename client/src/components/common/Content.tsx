@@ -11,13 +11,8 @@ const Wrapper = styled.div`
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 `;
 
-const Logo = styled.img`
-  height: 20rem;
-`;
-
 const MainBody: FC = () => (
   <Wrapper>
-    <Logo src="/logo.svg" alt="Techtalks" />
     <Router />
   </Wrapper>
 );

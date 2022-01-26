@@ -1,5 +1,22 @@
 import React, {FC} from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+
+const Wrapper = styled.div`
+  width: 100wv;
+  height: 20em;
+  margin: auto;
+  max-width: 70em;
+  background-color: #181b1e;
+  z-index: 10;
+`;
+
+const Logo = styled.img`
+  margin-top: 0px;
+  width: 100%;
+  max-height: 100%;
+  background-color: #181b1e;
+`;
 
 const NavbarWrapper = styled.nav`
   background-color: #181b1e;
@@ -44,12 +61,14 @@ const Navbar: FC = () => {
       name: 'Om arrangementet',
     },
   ];
+
   return (
     <NavbarWrapper>
+      <Logo src="/logo.svg" />
       {NavOptions.map(({ id, name }) => (
         <NavbarA key={id} href={`${id}`}>
           <Knapp>
-            <NavbarText>{name}</NavbarText>
+            <Link to={id}>{name}</Link>
           </Knapp>
         </NavbarA>
       ))}
