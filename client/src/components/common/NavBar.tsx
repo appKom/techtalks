@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import Home from '../../pages/Home';
 
 const Wrapper = styled.div`
   width: 100wv;
@@ -64,7 +65,9 @@ const Navbar: FC = () => {
 
   return (
     <NavbarWrapper>
-      <Logo src="/logo.svg" />
+      <Link to={'/'}>{'Home'}
+        <Logo src="/logo.svg"/>
+      </Link>
       {NavOptions.map(({ id, name }) => (
         <NavbarA key={id} href={`${id}`}>
           <Knapp>
