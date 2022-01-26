@@ -47,7 +47,7 @@ const Navbar: FC = () => {
   return (
     <NavbarWrapper>
       {NavOptions.map(({ id, name }) => (
-        <NavbarA key={id} href={`#${id}`}>
+        <NavbarA key={id} href={`${id}`}>
           <Knapp>
             <NavbarText>{name}</NavbarText>
           </Knapp>

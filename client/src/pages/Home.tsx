@@ -1,11 +1,11 @@
 import React, {FC} from "react";
 import styled from "styled-components";
 
-import Navbar from "./NavBar";
+import Navbar from "../components/common/NavBar";
 import About from "./About";
-import Samarbeidspartnere from "./SamarbeidsPartnere";
-import Program from "./Program";
-import Overview from "./Overview";
+import Samarbeidspartnere from "../components/home/SamarbeidsPartnere";
+import Program from "../components/home/Program";
+import Overview from "../components/home/Overview";
 
 const Wrapper = styled.div``;
 

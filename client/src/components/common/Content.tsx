@@ -1,8 +1,6 @@
 import React, {FC} from 'react';
 import styled from 'styled-components';
-import { BrowserRouter, Route } from 'react-router-dom';
-
-import Home from '../home/Home';
+import Router from '../../router';
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,9 +18,7 @@ const Logo = styled.img`
 const MainBody: FC = () => (
   <Wrapper>
     <Logo src="/logo.svg" alt="Techtalks" />
-    <BrowserRouter>
-      <Route exact path="/" component={Home} />
-    </BrowserRouter>
+    <Router />
   </Wrapper>
 );
 

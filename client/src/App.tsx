@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from 'styled-components';
 import Content from './components/common/Content';
 import Footer from './components/common/Footer';
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-function App() {
+const App:FC = () => {
   return (
     <Wrapper>
       <Content />
