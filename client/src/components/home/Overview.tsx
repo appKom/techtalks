@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   flex: 1;
@@ -10,11 +10,7 @@ const Wrapper = styled.div`
 `;
 
 const Overview: FC = () => {
-  return (
-    <Wrapper>
-      Loading...
-    </Wrapper>
-  );
+  return <Wrapper>Loading...</Wrapper>;
 };
 
 export default Overview;
