@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-
 const Program: FC = () => {
   return (
     <Wrapper id="program">

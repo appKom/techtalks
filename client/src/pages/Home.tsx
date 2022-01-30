@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
 import Samarbeidspartnere from "../components/home/SamarbeidsPartnere";
@@ -41,12 +41,3 @@ const Home: FC = () => {
 };
 
 export default Home;
-
-/*
-
-<Overview events={program} />
-        <Program events={program} />
-        <Samarbeidspartnere partners={partners} />
-        <About event={event} />
-
-*/
