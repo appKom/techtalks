@@ -25,6 +25,9 @@ const Navbar: FC = () => {
       to={`/${navOption.id}`}
       mr={10}
       ml={10}
+      _focus={{
+        WebKitTapHighlightColor: "transparent",
+      }}
     >
       <Box
         display="inline-block"
@@ -56,6 +59,9 @@ const Navbar: FC = () => {
         marginLeft="auto"
         marginRight="auto"
         marginTop="0"
+        _focus={{
+          WebKitTapHighlightColor: "transparent",
+        }}
       >
         <Image src={process.env.PUBLIC_URL + "/logo.svg"} alt="Logo" />
       </Link>
