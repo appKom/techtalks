@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import Navbar from './components/common/NavBar';
 import Content from './components/common/Content';
@@ -8,11 +8,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 70rem;
+  width: 90%;
   margin: 0 auto;
 `;
 
-const App:FC = () => {
+const App: FC = () => {
   return (
     <Wrapper>
       <Navbar />
@@ -20,6 +20,6 @@ const App:FC = () => {
       <Footer />
     </Wrapper>
   );
-}
+};
 
 export default App;

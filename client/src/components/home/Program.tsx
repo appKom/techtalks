@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import styled from "styled-components";
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   flex: 1;
@@ -7,7 +7,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
 
 const Program: FC = () => {
   return (
