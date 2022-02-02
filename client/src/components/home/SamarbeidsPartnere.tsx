@@ -1,10 +1,15 @@
 import React, {FC, useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
+import fetchCompanies from '../../api/companies';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+const AttendingIDs = [
+  '1', '2', '3', '4', '5'
+]
 
 const Samarbeidspartnere: FC = () => {
   interface Company {
@@ -23,17 +28,9 @@ const Samarbeidspartnere: FC = () => {
       }]);
   }
 
-  const OwCompaniesUrl = 'https://old.online.ntnu.no/api/v1/companies/'
-  const AttendingIDs = [
-    1, 2, 3, 4, 5
-  ]
   useEffect(() => {
-    async function fetchCompaniesAPI(id: number) {let response = await fetch(OwCompaniesUrl + id + '/')
-      response = await response.json()
-      handleNewCompany(response)
-    }
     AttendingIDs.map((id) => (
-      fetchCompaniesAPI(id)
+      fetchCompanies(id).then((company) => handleNewCompany(company))
     ))
   }, [])
 
