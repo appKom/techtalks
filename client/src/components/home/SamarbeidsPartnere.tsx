@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React, {FC, useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import fetchCompanies from '../../api/companies';
-=======
-import React, { FC } from "react";
-import styled from "styled-components";
->>>>>>> 72dfb4868ec5146fd4c26a5ea76c7e3a227a697b
+import { Box, Heading, LinkBox, LinkOverlay, Image, SimpleGrid } from '@chakra-ui/react'
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,10 +13,16 @@ const AttendingIDs = [
 ]
 
 const Samarbeidspartnere: FC = () => {
-<<<<<<< HEAD
   interface Company {
     id: number,
     name: string,
+    site: string,
+    image: Img,
+  }
+  interface Img {
+    id: number,
+    name: string,
+    xs: string,
 }
 
   const [companies, setCompanies] = useState<any | null>([]);
@@ -30,7 +32,9 @@ const Samarbeidspartnere: FC = () => {
       ...prevArray,
       {
         id: company.id,
-        name: company.name
+        name: company.name,
+        site: company.site,
+        image: company.image,
       }]);
   }
 
@@ -43,17 +47,24 @@ const Samarbeidspartnere: FC = () => {
   console.log(companies)
   return (
     <Wrapper>
-      {companies.map((data:Company) => (
-        <>
-          <p>{data.id}</p>
-          <p>{data.name}</p>
-        </>
-      ))}
+      <SimpleGrid columns={3} spacing={10}>
+        {companies.map((data:Company) => (
+          <>
+          
+            <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md'>
+              <Heading size='md' my='2'>
+                <LinkOverlay href={data.site}>
+                  {data.name}
+                </LinkOverlay>
+              </Heading>
+              <Image src={data.image.xs} alt={data.image.name} boxSize='150px' objectFit='contain'/>
+            </LinkBox>
+            
+          </>
+        ))}
+      </SimpleGrid>
     </Wrapper>
   );
-=======
-  return <Wrapper>Loading...</Wrapper>;
->>>>>>> 72dfb4868ec5146fd4c26a5ea76c7e3a227a697b
 };
 
 export default Samarbeidspartnere;
