@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 const AttendingIDs = [
-  '1', '2', '3', '4', '5'
+  '1', '2', '3', '4', '5', '6'
 ]
 
 const Samarbeidspartnere: FC = () => {
@@ -51,13 +51,10 @@ const Samarbeidspartnere: FC = () => {
         {companies.map((data:Company) => (
           <>
           
-            <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md'>
-              <Heading size='md' my='2'>
+            <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' bg='white'>
                 <LinkOverlay href={data.site}>
-                  {data.name}
+                  <Image src={data.image.xs} alt={data.image.name} boxSize='150px' objectFit='contain'/>
                 </LinkOverlay>
-              </Heading>
-              <Image src={data.image.xs} alt={data.image.name} boxSize='150px' objectFit='contain'/>
             </LinkBox>
             
           </>
