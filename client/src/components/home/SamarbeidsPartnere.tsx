@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, {FC, useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import fetchCompanies from '../../api/companies';
+=======
+import React, { FC } from "react";
+import styled from "styled-components";
+>>>>>>> 72dfb4868ec5146fd4c26a5ea76c7e3a227a697b
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,6 +17,7 @@ const AttendingIDs = [
 ]
 
 const Samarbeidspartnere: FC = () => {
+<<<<<<< HEAD
   interface Company {
     id: number,
     name: string,
@@ -45,6 +51,9 @@ const Samarbeidspartnere: FC = () => {
       ))}
     </Wrapper>
   );
+=======
+  return <Wrapper>Loading...</Wrapper>;
+>>>>>>> 72dfb4868ec5146fd4c26a5ea76c7e3a227a697b
 };
 
 export default Samarbeidspartnere;

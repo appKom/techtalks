@@ -1,25 +1,22 @@
-import React, {FC} from 'react';
-import styled from 'styled-components';
-import Navbar from './components/common/NavBar';
-import Content from './components/common/Content';
-import Footer from './components/common/Footer';
+import React, { FC } from "react";
+import Navbar from "./components/common/NavBar";
+import Content from "./components/common/Content";
+import Footer from "./components/common/Footer";
+import { Flex } from "@chakra-ui/react";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 70rem;
-  margin: 0 auto;
-`;
-
-const App:FC = () => {
+const App: FC = () => {
   return (
-    <Wrapper>
+    <Flex
+      direction="column"
+      alignItems="center"
+      maxWidth="70rem"
+      margin="0 auto"
+    >
       <Navbar />
       <Content />
       <Footer />
-    </Wrapper>
+    </Flex>
   );
-}
+};
 
 export default App;

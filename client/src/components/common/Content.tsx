@@ -1,20 +1,20 @@
-import React, {FC} from 'react';
-import styled from 'styled-components';
-import Router from '../../router';
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #181b1e;
-  text-align: center;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-`;
+import React, { FC } from "react";
+import Router from "../../router";
+import { Flex, Divider } from "@chakra-ui/react";
 
 const MainBody: FC = () => (
-  <Wrapper>
+  <Flex
+    direction="column"
+    alignItems="center"
+    background="#181b1e"
+    textAlign="center"
+    boxShadow={`0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)`}
+    maxWidth="70rem"
+    w="100%"
+  >
+    <Divider colorScheme="gray" w="80%" />
     <Router />
-  </Wrapper>
+  </Flex>
 );
 
 export default MainBody;
