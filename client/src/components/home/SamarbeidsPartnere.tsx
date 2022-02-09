@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 const AttendingIDs = [
-  '1', '2', '3', '4', '5', '6'
+  '1', '2', '3', '4', '5', '6',
 ]
 
 const Samarbeidspartnere: FC = () => {
@@ -52,7 +52,7 @@ const Samarbeidspartnere: FC = () => {
           <>
           
             <LinkBox as='article' maxW='sm' p='5' borderWidth='1px' rounded='md' bg='white'>
-                <LinkOverlay href={data.site}>
+                <LinkOverlay href={data.site} isExternal={true}>
                   <Image src={data.image.xs} alt={data.image.name} boxSize='150px' objectFit='contain'/>
                 </LinkOverlay>
             </LinkBox>
