@@ -67,11 +67,10 @@ const Navbar: FC = () => {
       </Link>
 
       <Flex
-        w="100%"
+        w="80%"
         direction="row"
         marginLeft="auto"
         marginRight="auto"
-        textAlign="center"
         justifyContent="center"
       >
         {NavLinks}
